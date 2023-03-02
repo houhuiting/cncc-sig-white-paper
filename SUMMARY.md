@@ -7,6 +7,7 @@
 * [海光CSV机密容器](./hygon_csv.md)
 * [Inclavare Containers](./inclavare_containers.md)
 * [Intel Confidential Computing Zoo](./cczoo.md)
+* [Intel Homomorphic Encryption](./intel_HE.md)
 * [Occlum](./occlum.md)
 * [PPML](./ppml.md)
 * [RATS-TLS](./rats_tls.md)

@@ -2,7 +2,7 @@
 
 ## 项目位置链接
 
-http://gitlab.alibaba-inc.com/java-tee/JavaEnclave/tree/master
+https://github.com/apache/incubator-teaclave-java-tee-sdk
 
 ## 归属社区SIG
 
@@ -12,15 +12,15 @@ http://gitlab.alibaba-inc.com/java-tee/JavaEnclave/tree/master
 
 ### 背景
 
-机密计算是通过在基于硬件的受信任执行环境(TEE) 中执行计算来保护使用中的数据。TEE是强制仅执行已授权代码的环境。 TEE外部的任何代码都无法读取或篡改该环境中的任何数据。 机密计算威胁模型旨在消减云提供商和运营商以及租户域中的其他行动者访问正在执行的代码和数据的能力。
+数据在存储和传输状态的安全性通过加解密得到了很好的解决，但数据在运行时是以明文的方式参与计算的，很容易出现泄漏，造成不可估量的风险。机密计算技术正是为了解决运行时数据安全问题而生，它通过处理器提供一个基于芯片的可信执行环境(TEE)，将敏感数据和代码放置在该TEE内执行，TEE对整个计算过程进行严格保护，有效阻止TEE之外的组件(包括操作系统)获取或篡改TEE内的代码和数据，保证敏感代码和数据的安全性。
 
 ### 问题与挑战
 
-基于Intel SGX Enclave硬件的SGX SDK是一种partition编程模型, 它将一个应用分割成Host与Enclave两部分，只将Enclave部分的代码和数据运行在SGX TEE内运行，保证了TCB足够小，可有效降低敏感数据的攻击面。但这种编程模型需要对已有的应用进行分割改造，且需要定义复杂的配置文件等， 导致应用门槛比较高，阻碍了该技术的广泛使用。
+Intel SGX技术提供了极高安全等级的可信执行环境，但使用该技术需要对已有的应用代码进行改造，SGX SDK只提供了对C语言生态的支持，此外用户需要用.edl文件定义服务接口，开发过程繁琐，对开发者的编程习惯冲击较大，造成开发门槛很高，阻碍了该技术的发展与应用。
 
 ### 解决方案
 
-Apache Teaclave Java TEE SDK(JavaEnclave)采用Java静态编译技术将机密计算从C/C++生态扩展到Java生态，并继承了SGX SDK所定义的Host-Enclave Partition编程模型，最大限度的降低了系统TCB，给用户提供一个Pure Java的机密计算开发界面和构建工具链。
+Teaclave Java TEE SDK提供基于Intel SGX技术的Java生态机密计算开发框架。采用Java静态编译技术将Enclave Module编译成Native代码并运行在SGX TEE中，实现对高级语言的支持并最大限度保持较低的系统TCB。屏蔽底层交互细节，用户无须定义edl接口文件。给用户提供一个Pure Java的机密计算开发框架和编译构建工具链，极大降低Intel SGX的开发门槛。
 
 ### 结果
 
@@ -34,16 +34,16 @@ Apache Teaclave Java TEE SDK(JavaEnclave)采用Java静态编译技术将机密�
 
 ### 场景描述
 
-JavaEnclave可应用在对敏感算法和数据有保护诉求的领域，比如金融、区块链、医疗与联邦计算等；有效防止平台提供商或黑客对敏感数据的非法窃取。
+Teaclave Java TEE SDK可应用于对数据和算法敏感的领域。比如政府部门、金融、区块链、医疗和联邦计算等；
 
-在阿里云DataTrust隐私增强计算平台，JavaEnclave应用在SQL安全审计和加密文件转加密等两个微服务模块。
+在阿里云DataTrust隐私增强计算平台，Teaclave Java TEE SDK应用在SQL安全审计和文件转加密等两个微服务模块中；
 
 ### 应用效果
 
-采用JavaEnclave可以让用户开发Pure Java的机密计算服务，同时不牺牲整个系统的机密性与性能。
+基于Teaclave Java TEE SDK帮助用户开发Pure Java机密计算应用，并保证系统安全性和性能，提升机密计算应用开发效率与体验。
 
 ## 竞品分析
 
-Intel SGX SDK与OpenEnclave只支持C/C++机密计算应用，开发难度较大，开发效能比低；
+Intel SGX SDK与OpenEnclave仅支持C/C++生态机密计算应用开发，且开发门槛高；
 
-Occlum LibOS技术降低开发难度，兼容性高，但TCB相对较大，牺牲了部分应用机密性；
+Occlum LibOS技术降低了机密计算开发与部署难度，但系统TCB很大，牺牲了应用部分机密性；
