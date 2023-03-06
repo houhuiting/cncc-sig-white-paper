@@ -67,7 +67,7 @@
         }     
     },
     "structure": {
-        "readme": "overview.md"
+        "readme": "introduction.md"
     },
     "generator": "site"
 }

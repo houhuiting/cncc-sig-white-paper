@@ -2,7 +2,9 @@
 
 ## 项目位置链接
 
+Veracuz: https://github.com/veracruz-project/veracruz
 
+VERAISON-VERificAtIon of atteStatiON: https://github.com/veraison/veraison
 
 ## 项目归属SIG
 
@@ -20,9 +22,9 @@ TrustZone是Arm为设备安全提供的一个安全架构，通过硬件隔离�
 
 ### 解决方案
 
-Arm CCA 引入了一种新的机密计算世界：机密领域（Realm）。在Arm CCA中，硬件扩展被称为Realm Management Extension (RME)，RME会和被称之为 Realm Management Monitor (RMM) 用来控制 Realm 的专门固件，及在 Exception level 3 中的 Monitor 代码交互。
+Arm CCA引入了一种新的机密计算世界：机密领域（Realm）。在Arm CCA中，硬件扩展被称为Realm Management Extension (RME)，RME会和被称之为Realm Management Monitor (RMM) 用来控制Realm的专门固件，及在Exception level 3中的Monitor代码交互。
 
-Realm 是一种Arm CCA环境，能被Normal world主机动态分配。主机是指能管理应用程序或虚拟机的监控软件。Realm 及其所在平台的初始化状态都可以得到验证。这一过程使 Realm 的所有者能在向它提供任何机密前就建立信任。因此，Realm 不必继承来自控制它的 Non-secure hypervisor 的信任。主机可以分配和管理资源配置,管理调度 Realm 虚拟机。然而，主机不可以监控或修改 Realm 执行的指令。在主机控制下，Realm 可以被创建并被销毁。通过主机请求，可以增加或移除页面，这与 hypervisor 管理任何其他非机密虚拟机的操作方式类似。
+Realm是一种Arm CCA环境，能被Normal world主机动态分配。主机是指能管理应用程序或虚拟机的监控软件。Realm及其所在平台的初始化状态都可以得到验证。这一过程使Realm的所有者能在向它提供任何机密前就建立信任。因此，Realm不必继承来自控制它的Non-secure hypervisor的信任。主机可以分配和管理资源配置,管理调度Realm虚拟机。然而，主机不可以监控或修改Realm执行的指令。在主机控制下，Realm可以被创建并被销毁。通过主机请求，可以增加或移除页面，这与hypervisor管理任何其他非机密虚拟机的操作方式类似。
 
 ### 结果
 
@@ -34,6 +36,6 @@ Arm CCA技术能够从根本上解决用户敏感应用数据的安全计算问�
 
 ## 当前应用情况
 
-Realm内运行的代码将管理机密数据或运行机密算法，这些代码需要确保正在运行真正的 Arm CCA 平台，而不是冒充者。这些代码还需要知道自己已经被正确地加载，没有遭到篡改。并且，这些代码还需要知道整个平台或 Realm 并不处于可能导致机密泄露的调试状态。建立这种信任的过程被称为“证明”。ARM正在与包括机密计算联盟成员在内的主要行业合作伙伴合作，定义这一证明机制的属性，确保在不同的产品和设备上使用常见的平台真实性和来源方法。Arm主导的开源软件Veracuz（https://github.com/veracruz-project/veracruz)是一个框架，用于在一组相互不信任的个人之间定义和部署协作的、保护隐私的计算；VERAISON-VERificAtIon of atteStatiON（https://github.com/veraison/veraison）构建可用于证明验证服务的软件组件。
+Realm内运行的代码将管理机密数据或运行机密算法，这些代码需要确保正在运行真正的Arm CCA平台，而不是冒充者。这些代码还需要知道自己已经被正确地加载，没有遭到篡改。并且，这些代码还需要知道整个平台或Realm并不处于可能导致机密泄露的调试状态。建立这种信任的过程被称为“证明”。ARM正在与包括机密计算联盟成员在内的主要行业合作伙伴合作，定义这一证明机制的属性，确保在不同的产品和设备上使用常见的平台真实性和来源方法。Arm主导的开源软件Veracuz是一个框架，用于在一组相互不信任的个人之间定义和部署协作的、保护隐私的计算；VERAISON-VERificAtIon of atteStatiON构建可用于证明验证服务的软件组件。
 
-Arm CCA的RME功能特性将在Arm V9.2和后续的的架构中支持，对应的芯片将在2024年问世，基于CCA的软件支持已经在虚拟硬件平台上进行开发，测试和验证，将在硬件设备问世的同时将同步支持。更多信息，可以访问 https://arm.com/armcca 获取更多信息。
+Arm CCA的RME功能特性将在Arm V9.2和后续的的架构中支持，对应的芯片将在2024年问世，基于CCA的软件支持已经在虚拟硬件平台上进行开发，测试和验证，将在硬件设备问世的同时将同步支持。更多信息，可以访问https://arm.com/armcca获取更多信息。

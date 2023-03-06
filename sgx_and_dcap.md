@@ -1,4 +1,4 @@
-# SGX SDK & DCAP
+# Intel SGX SDK & DCAP
 
 ## 项目位置链接
 

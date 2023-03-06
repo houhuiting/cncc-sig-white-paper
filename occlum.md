@@ -21,13 +21,13 @@ https://github.com/occlum/occlum
 
 Occlum是基于SGX基础上实现的一套轻量级LibOS，大大简化了应用开发者的难度。使用 Occlum 后，机器学习工作负载等只需修改极少量（甚至无需修改）源代码即可在英特尔® SGX 上运行，以高度透明的方式保护了用户数据的机密性和完整性。
 
-### 结果
-
-大大简化，加速了机器学习等大规模应用运行在TEE（SGX）环境。
-
 ### 技术介绍图片
 
 ![image.png](materials/imgs/occlum.png)
+
+### 结果
+
+大大简化，加速了机器学习等大规模应用运行在TEE（SGX）环境。
 
 ## 应用场景
 
