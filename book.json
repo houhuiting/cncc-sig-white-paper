@@ -23,7 +23,7 @@
     ],
     "pluginsConfig": {
         "edit-link": {
-            "base": "https://github.com/inclavare-containers/cncc-sig-white-paper/edit/master",
+            "base": "https://github.com/houhuiting/cncc-sig-white-paper/edit/master",
             "label": "编辑"
         },
         "tbfed-pagefooter": {
@@ -38,7 +38,7 @@
             "elements": [".gitbook-link"]
         },
         "copyright": {
-            "site": "https://https://github.com/inclavare-containers/cncc-sig-white-paper/",
+            "site": "https://github.com/inclavare-containers/cncc-sig-white-paper/",
             "author": "CNCC-sig",
             "website": "CNCC-sig",
             "copyProtect": true
