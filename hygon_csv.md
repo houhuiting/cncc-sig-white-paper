@@ -33,10 +33,10 @@ CSV机密容器构建了以安全加密虚拟机为基础的可信执行环境�
 
 ### 技术介绍图片
 
-![image.png](materials/imgs/csv.png)
+<div align=center><img src="materials/imgs/csv.png"></div>
 
-![image.png](materials/imgs/csv_kata_cc.png)
- 
+<div align=center><img src="materials/imgs/csv_kata_cc.png"></div>
+
 ## 应用场景
 
 安全加密虚拟化可以保证最终用户数据的机密性和完整性，可用于实施机密计算，适用于云计算和隐私计算场景。

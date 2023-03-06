@@ -22,12 +22,13 @@ https://github.com/confidential-containers/enclave-cc
 
 Enclave-c方案在部署阶段对用户的镜像进行加密和签名处理， 从而保证镜像的安全性和完整性， 防止在被第三方窥探和修改镜像的内容。 在生成容器镜像的时候， 用户只需要和制作普通容器镜像一样，不需要针对特定的libos做额外定制， 对于支持POSIX API的应用， 可以完全兼容的通过enclave-cc成功运行起来。
 
-### 结果
-
-Enclave-cc为云原生用户提供了一种机密容器的部署和运行方案。 能够让用户在使用机密容器的时候具有和使用普通容器一样的体感， 用户不需要针对于机密容器的场景修改应用, 在部署的时候不需要额外的操作步骤。
-
 ### 技术介绍图片
 
 ![image.png](materials/imgs/enclave_cc_background.png)
 
 ![image.png](materials/imgs/enclave_cc_overview.png)
+
+### 结果
+
+Enclave-cc为云原生用户提供了一种机密容器的部署和运行方案。 能够让用户在使用机密容器的时候具有和使用普通容器一样的体感， 用户不需要针对于机密容器的场景修改应用, 在部署的时候不需要额外的操作步骤。
+

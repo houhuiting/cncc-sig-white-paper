@@ -22,13 +22,13 @@ Intel SGX技术提供了极高安全等级的可信执行环境，但使用该�
 
 Teaclave Java TEE SDK提供基于Intel SGX技术的Java生态机密计算开发框架。采用Java静态编译技术将Enclave Module编译成Native代码并运行在SGX TEE中，实现对高级语言的支持并最大限度保持较低的系统TCB。屏蔽底层交互细节，用户无须定义edl接口文件。给用户提供一个Pure Java的机密计算开发框架和编译构建工具链，极大降低Intel SGX的开发门槛。
 
+### 技术介绍图片
+
+<div align=center><img src="materials/imgs/java_enclave_technology.png"></div>
+
 ### 结果
 
 将机密计算从C/C++应用生态扩展到Java生态，在不牺牲机密安全性的前提下，极大提升开发效率和用户体验。
-
-### 技术介绍图片
-
-![image.png](materials/imgs/java_enclave_technology.png)
 
 ## 应用场景
 

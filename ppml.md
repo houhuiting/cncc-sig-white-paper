@@ -24,9 +24,9 @@ BigDL是英特尔开源的统一的人工智能解决方案平台，数据科学
 
 ### 技术介绍图片
 
-![image.png](materials/imgs/ppml_architecture.png)
+<div align=center><img src="materials/imgs/ppml_architecture.png"></div>
 
-![image.png](materials/imgs/ppml_workflow.png)
+<div align=center><img src="materials/imgs/ppml_workflow.png"></div>
 
 上图是BigDL PPML预制工作流：
 1.	用户通过BigDL PPML命令行向Kubernetes提交任务，此操作会创建一个驱动节点
